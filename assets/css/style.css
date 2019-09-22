@@ -1,0 +1,14 @@
+#header {
+    background-color: rgba(6, 24, 124, 0.447);
+    font-size: 4em;
+    color: white;
+    
+}
+.card-header{
+    background-color: rgb(51, 115, 194);
+    color: white;
+    padding: 5px 0 5px 25px;
+}
+.btn.btn-info.btn-sm.mt-3 {
+    background-color: rgb(51, 115, 194);
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Train Scheduler</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="container jumbotron text-center">
+        Travel with the wind!
+      </div>
+      <div id="schedule-table " class="card">
+        <div class="card-header">Current Train Schedule</div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <tr>
+                <th id="train_name">Train Name</th>
+                <th id="destination">Destination</th>
+                <th id="frequency">Frequency(min)</th>
+                <th id="next_arrival">Next Arrival</th>
+                <th id="min_away">Minutes Away</th>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="submit-form" class="card mt-3">
+        <div class="card-header">Add Train</div>
+        <div class="card-body">
+          <form>
+            <label>Train Name</label>
+            <input class="form-control" type="text" />
+            <label>Destination</label>
+            <input class="form-control" type="text" />
+            <label>First Train Time(HH:mm - military time)</label>
+            <input class="form-control" type="text" />
+            <label>Frequency(min)</label>
+            <input class="form-control" type="text" />
+            <input class="btn btn-info btn-sm mt-3" type="submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/javascript/app.js"></script>
+  </body>
+</html>
