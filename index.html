@@ -12,48 +12,57 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css"
     />
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Train Scheduler</title>
   </head>
   <body>
     <div class="container">
-      <div id="header" class="container jumbotron text-center">
-        Travel with the wind!
+      <div id="header" class="container jumbotron text-center text-info">
+        <div id="theTime">00:00:00</div>  
+        The only way to be sure of catching a train is to miss the one before it.
       </div>
-      <div id="schedule-table " class="card">
+      
+      <div id="schedule-table " class="card bg-info">
         <div class="card-header">Current Train Schedule</div>
         <div class="card-body">
-          <div class="table-responsive">
-            <table class="table">
+          <div class="table-responsive ">
+            <table class="table text-white">
               <tr>
                 <th id="train_name">Train Name</th>
                 <th id="destination">Destination</th>
                 <th id="frequency">Frequency(min)</th>
                 <th id="next_arrival">Next Arrival</th>
-                <th id="min_away">Minutes Away</th>
+                <th id="min_away">Hours and Minutes Away</th>
               </tr>
+              <tbody id="tbody">
+
+              </tbody>
             </table>
           </div>
         </div>
       </div>
-      <div id="submit-form" class="card mt-3">
+      <div id="submit-form" class="card bg-white text-white mt-3">
         <div class="card-header">Add Train</div>
         <div class="card-body">
-          <form>
+          <form name="req">
             <label>Train Name</label>
-            <input class="form-control" type="text" />
+            <input id="tname" class="form-control inpt" type="text" placeholder="Gavà" />
             <label>Destination</label>
-            <input class="form-control" type="text" />
+            <input id="dest" class="form-control inpt" type="text" placeholder="Castelldefels" />
             <label>First Train Time(HH:mm - military time)</label>
-            <input class="form-control" type="text" />
+            <input id="ftt" class="form-control inpt" type="text" placeholder="14:00" onsubmit="return formValid()"/>
             <label>Frequency(min)</label>
-            <input class="form-control" type="text" />
-            <input class="btn btn-info btn-sm mt-3" type="submit" />
+            <input id="freq" class="form-control inpt" type="text" placeholder="120" onsubmit="return formValid()"/>
+            <button id="submit" class="btn btn-info btn-sm mt-3" type="submit">Add Train</button>
           </form>
         </div>
       </div>
     </div>
-
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-database.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
     <script
@@ -61,6 +70,7 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
     <script src="assets/javascript/app.js"></script>
   </body>
 </html>
